@@ -2,7 +2,6 @@
 TIMESTAMP=$(date +%Y%m%d)
 PUNTO="A"
 
-# ---
 clear
 echo "Se espera ver: "
 echo "Discos de 1G y 2G"
@@ -11,14 +10,12 @@ echo "vg_Datos -> lv_workareas=1.5G"
 echo "vg_temp  -> lv_swap"
 echo 
 
-# --- Particiones
 echo "lsblk -f"
 lsblk -f
 echo
 read -p "Presione una tecla para continuar" PAUSA
 echo
 
-# --- LVM
 echo "pvs - vgs - lvs "
 sudo pvs
 echo
@@ -27,17 +24,14 @@ echo
 sudo lvs
 echo
 
-# --- SWAP
 echo "swap"
 free -h 
 swapon -s 
 
-# --- Montaje
 echo
 echo "df -h"
 df -h
 
-# --- Comandos usados:
 echo
 echo "cat $HOME/RTA_Examen_${TIMESTAMP}/Punto_${PUNTO}.sh"
 echo
