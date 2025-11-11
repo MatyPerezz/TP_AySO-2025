@@ -2,7 +2,6 @@
 TIMESTAMP=$(date +%Y%m%d)
 PUNTO="B"
 
-# ---
 clear
 echo "Se espera ver Script: "
 ls -l /usr/local/bin/
@@ -10,7 +9,6 @@ echo
 cat /usr/local/bin/*AltaUser-Groups.sh
 echo 
 
-# --- Usuarios y grupos
 echo
 echo "usuarios"
 grep -i 2P /etc/passwd
@@ -23,8 +21,6 @@ echo
 echo "Home usuarios:"
 ls -l /work/
 
-
-# --- Comandos usados:
 echo
 echo "cat $HOME/RTA_Examen_${TIMESTAMP}/Punto_${PUNTO}.sh"
 echo
